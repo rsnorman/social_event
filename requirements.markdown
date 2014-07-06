@@ -1,0 +1,15 @@
+# Social Event Requirements
+- Instagram
+  - Show photos with hashtag x
+  - Authenticate users x
+  - Show photos of connected users x
+- Twitter
+  - Show tweets with hashtag
+  - Authenticate users
+  - Show tweets of connected users
+- Facebook
+  - Show posts with hashtag
+  - Authenticate users
+  - Show posts of connected users
+- Limit social posts to time period of event
+- Display posts in sequential view
