@@ -1,6 +1,6 @@
 <h1>Posts</h1>
 <% @posts.each do |post| %>
-  <% unless post.is_a?(Twitter::Tweet) %>
+  <% unless post.respond_to?(:text) %>
     <img src="<%= post.images.thumbnail.url %>" alt="" />
   <% else %>
     <div><%= post.text %></div>
