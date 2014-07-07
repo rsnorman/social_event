@@ -1,6 +1,6 @@
 SocialEvent::Application.routes.draw do
   resources :apps, :only => :index do
-    collection do
+    member do
       get :auth
       get :callback
     end

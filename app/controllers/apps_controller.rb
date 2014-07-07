@@ -4,17 +4,17 @@ class AppsController < ApplicationController
   end
 
   def auth
-    redirect_to Instagram.authorize_url(:redirect_uri => IG_CALLBACK_URL)
+    redirect_to social_client.authorize_url
   end
 
   def callback
-    response = Instagram.get_access_token(params[:code], :redirect_uri => IG_CALLBACK_URL)
-    @user = User.create(:service_id => response.user.id,
-                        :service_type => "Instagram",
-                        :name => response.user.full_name,
-                        :username => response.user.username,
-                        :access_token => response.access_token,
-                        :profile_image_url => response.user.profile_picture
-    )
+    auth_params = params.select { |key, value| social_client.auth_params.include?(key.to_sym) }
+    access_token = social_client.get_access_token(*auth_params.values)
+    @user = User.create(social_client.user_params_from_access_token(access_token))
+  end
+
+  private
+  def social_client
+    @social_client ||= SocialClient.create(params[:id])
   end
 end

@@ -5,7 +5,7 @@
   - Show photos of connected users x
 - Twitter
   - Show tweets with hashtag
-  - Authenticate users
+  - Authenticate users x
   - Show tweets of connected users
 - Facebook
   - Show posts with hashtag

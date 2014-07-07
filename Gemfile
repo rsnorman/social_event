@@ -5,6 +5,7 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 gem 'instagram'
 gem 'twitter'
+gem 'twitter_oauth'
 
 group :development, :test do
   gem 'factory_girl_rails' , '~> 4.2'
