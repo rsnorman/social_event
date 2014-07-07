@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :service_type
       t.string :profile_image_url
       t.string :access_token
+      t.string :access_secret
 
       t.timestamps
     end

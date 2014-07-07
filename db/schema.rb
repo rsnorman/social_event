@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20140706041420) do
     t.string   "service_type"
     t.string   "profile_image_url"
     t.string   "access_token"
+    t.string   "access_secret"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end

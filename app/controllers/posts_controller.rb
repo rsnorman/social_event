@@ -9,6 +9,5 @@ class PostsController < ApplicationController
 
     client = Instagram.client
     @posts = @posts.concat(client.tag_recent_media('NormGarvWedding'))
-    raise @posts.first.inspect
   end
 end
