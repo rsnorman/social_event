@@ -14,5 +14,8 @@ class PostsController < ApplicationController
 
     client = Instagram.client
     @posts = @posts.concat(client.tag_recent_media('NormGarvWedding'))
+
+    client = TwitterClient.new.instance_variable_get("@client")
+    @posts = @posts.concat(client.search('#NormGarvWedding').to_hash[:statuses].collect{|x| Hashie::Mash.new(x)})
   end
 end
