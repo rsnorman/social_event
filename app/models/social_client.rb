@@ -4,6 +4,8 @@ class SocialClient
       InstagramClient.new(options)
     elsif name.to_sym == :twitter
       TwitterClient.new(options)
+    elsif name.to_sym == :facebook
+      FacebookClient.new(options)
     end
   end
 end

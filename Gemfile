@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'instagram'
 gem 'twitter'
 gem 'twitter_oauth'
+gem "koala", "~> 1.10.0rc"
 
 group :development, :test do
   gem 'factory_girl_rails' , '~> 4.2'
